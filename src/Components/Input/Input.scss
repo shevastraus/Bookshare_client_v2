@@ -1,0 +1,14 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.form-field {
+    width: 100%;
+    @include forms;
+    &__label {
+        @include form-labels;
+    }
+    &__input {
+        @include form-fields;
+        width: 60%;
+    }
+}

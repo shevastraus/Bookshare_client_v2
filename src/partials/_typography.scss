@@ -1,0 +1,64 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+
+@font-face {
+    font-family: 'Share';
+    src: url('../assets/fonts/Share-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Share-Bold.woff') format('woff'),
+        url('../assets/fonts/Share-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Share';
+    src: url('../assets/fonts/Share-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/Share-BoldItalic.woff') format('woff'),
+        url('../assets/fonts/Share-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Share';
+    src: url('../assets/fonts/Share-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Share-Regular.woff') format('woff'),
+        url('../assets/fonts/Share-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Share';
+    src: url('../assets/fonts/Share-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Share-Italic.woff') format('woff'),
+        url('../assets/fonts/Share-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+.text-standard {
+    font-family: 'Share';
+    font-weight: 400;
+    color: $default-text-color;
+}
+
+@mixin text-bold {
+    @extend .text-standard;
+    font-weight: 700;
+}
+
+@mixin text-italic {
+    @extend .text-standard;
+    font-style: italic;
+}
+
+@mixin text-bold-italic {
+    @extend .text-standard;
+    font-weight: 700;
+    font-style: italic;
+}

@@ -1,0 +1,18 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.support {
+    @include main-padding;
+    @include tablet {
+        max-width: 30rem;
+        padding: 3rem;
+        margin: 0 auto;
+    }
+    &__email-link {
+        color: $brand-primary;
+        display: inline;
+        &:hover {
+            color: $brand-primary2;
+        }
+    }
+}

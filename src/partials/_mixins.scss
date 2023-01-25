@@ -1,0 +1,157 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
+@mixin main-padding {
+  padding: 1rem;
+  @include tablet {
+    padding: 1.2rem;
+  }
+}
+
+@mixin main-containers {
+  @include main-padding;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin button {
+  width: 12rem;
+  border: 1px solid $brand-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  margin: 0.75rem;
+  color: $brand-primary;
+
+  &:hover {
+    border: 1px solid $brand-primary2;
+    color: $brand-primary2;
+  }
+}
+
+@mixin button-img {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 2rem;
+}
+
+@mixin button-cta {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin cancel {
+  color: $brand-primary2;
+  width: 100%;
+  &:hover {
+    color: $brand-primary2;
+    font-weight: 700;
+  }
+}
+
+@mixin titles {
+  width: 100%;
+  margin: 0 0 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  @include tablet {
+    font-size: 1.75rem;
+  }
+}
+
+@mixin subtitles {
+  width: 100%;
+  margin: 0 0 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+@mixin book-titles {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+@mixin book-authors {
+  width: 100%;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: left;
+  margin: 0.125rem 0;
+}
+
+@mixin book-genres {
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: left;
+  margin: 0.125rem 0;
+}
+
+@mixin forms {
+  @include main-padding;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.1rem;
+  @include tablet {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin form-labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  text-align: left;
+  @include tablet {
+    margin: 0.75rem 0;
+  }
+}
+
+@mixin form-fields {
+  width: 80%;
+  resize: none;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  border: 1px solid $brand-primary-light;
+  border-radius: 0.5rem;
+  @include tablet {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin modal-cta {
+  border: 1px solid $brand-primary-light;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  &:hover {
+    text-decoration: underline;
+    color: $brand-primary-dark;
+    background-color: $brand-primary-light;
+    border: 1px solid $brand-primary;
+  }
+}

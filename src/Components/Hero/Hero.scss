@@ -1,0 +1,11 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.hero {
+    width: 100%;
+    padding: .25rem 0 0;
+    @include desktop {
+        max-height: 202px;
+        object-fit: cover;
+    }
+}

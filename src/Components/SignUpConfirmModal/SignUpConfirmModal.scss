@@ -1,0 +1,55 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.modal {
+  min-width: 50vw;
+  // min-height: 50vh;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    @include titles;
+    text-align: center;
+  }
+  &__account-info {
+    line-height: 1.8;
+    background-color: $brand-primary-light;
+    padding: 0.5rem;
+  }
+  &__account-info-input {
+    background-color: $brand-primary2-light;
+    padding: 0.125rem;
+  }
+  &__map {
+    width: 100%;
+    height: 20rem;
+    border: 2px solid black;
+    margin: 1rem 0;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  &__cta {
+    @include modal-cta;
+  }
+  &__delete-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__delete-book-image {
+    max-width: 8rem;
+  }
+  &__delete-book-title {
+    @include book-titles;
+    text-align: center;
+  }
+  &__error {
+    padding: 0.25rem;
+    color: $brand-primary2;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+}

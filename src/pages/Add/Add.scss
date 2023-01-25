@@ -1,0 +1,45 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.add {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__container {
+    @include main-containers;
+    max-width: 48rem;
+  }
+  &__title {
+    @include titles;
+  }
+  &__subtitle {
+    @include subtitles;
+  }
+  &__form {
+    @include forms;
+  }
+  &__form-input-label {
+    @include form-labels;
+  }
+  &__form-field {
+    @include form-fields;
+  }
+  &__error {
+    width: 100%;
+    padding: 0.25rem;
+    color: $brand-primary2;
+  }
+  &__add-button {
+    @include button;
+  }
+  &__button-image {
+    @include button-img;
+  }
+  &__button-text {
+    @include button-cta;
+  }
+  &__cancel {
+    @include cancel;
+  }
+}

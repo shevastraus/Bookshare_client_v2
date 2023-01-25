@@ -1,0 +1,24 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.login-error {
+    @include main-padding;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    &__image {
+        width: 50%;
+    }
+    &__message {
+        display: block;
+    }
+    &__link {
+        color: $brand-primary;
+        &:hover {
+            color: $brand-primary-dark;
+            text-decoration: underline;
+        }
+    }
+}

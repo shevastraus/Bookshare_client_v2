@@ -1,0 +1,67 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 100vh;
+  &__logo {
+    width: 11rem;
+    margin: 1rem 0;
+  }
+  &__form-container {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    max-width: 30rem;
+  }
+  &__form-title {
+    @include titles;
+    text-align: center;
+    margin-bottom: .25rem;
+  }
+  &__form {
+      @include forms;
+      padding: 0;
+      @include tablet {
+        padding: 1rem 2rem;
+      }
+  }
+  &__aside {
+    width: 100%;
+    margin: .25rem;
+  }
+  &__button {
+    @include button;
+    margin: .25rem;
+  }
+  &__button-image {
+      @include button-img;
+  }
+  &__button-text {
+      @include button-cta;
+  }
+  &__message {
+    width: 100%;
+    padding: .25rem;
+    color: $brand-primary2;
+  }
+  &__signin-link {
+    width: 100%;
+    color: $brand-primary;
+      &:hover {
+          color: $brand-primary;
+          text-decoration: underline;
+      }
+  }
+}

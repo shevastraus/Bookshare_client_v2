@@ -1,0 +1,20 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.borrow {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__container {
+    @include main-containers;
+    max-width: 48rem;
+  }
+  width: 100%;
+  &__title {
+    @include titles;
+  }
+  &__subtitle {
+    @include subtitles;
+  }
+}

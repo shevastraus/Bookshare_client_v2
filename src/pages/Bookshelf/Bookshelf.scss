@@ -1,0 +1,42 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.my-bookshelf {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__container {
+        @include main-containers;
+        max-width: 48rem;
+    }
+    &__title {
+        @include titles;
+    }
+    &__subtitle {
+        @include subtitles;
+    }
+    &__add-button {
+        @include button;
+    }
+    &__button-image {
+        @include button-img;
+    }
+    &__button-text {
+        @include button-cta;
+    }
+    &__book-list {
+        width: 100%;
+    }
+    &__no-books {
+        margin: .5rem;
+    }
+    &__no-books--link {
+        color: $brand-primary;
+        text-decoration: underline;
+        &:hover {
+            color: $brand-primary-dark;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use "../../partials/variables" as *;
+// @use "../../partials/mixins" as *;
+
+.remote-book-card {
+  &--false {
+    pointer-events: none;
+  }
+  &__available--true {
+    display: none;
+  }
+  &__available--false {
+    background-color: $brand-primary2;
+    margin: 0.5rem 0;
+    padding: .125rem;
+  }
+  &__error {
+    color: $brand-primary2;
+    margin-top: 1rem;
+    background-color: $brand-primary;
+  }
+  &__no-click {
+    pointer-events: none;
+  }
+}

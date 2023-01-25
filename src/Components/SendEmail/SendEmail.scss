@@ -1,0 +1,38 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.contact-form {
+  @include forms;
+  &__label {
+    @include form-labels;
+  }
+  &__label--textarea {
+    align-items: flex-start;
+  }
+  &__not-a-field {
+    @include form-fields;
+    border: 0;
+    text-align: left;
+  }
+  &__field {
+    @include form-fields;
+  }
+  &__text-area {
+    @include form-fields;
+    min-height: 6rem;
+  }
+  &__error {
+    width: 100%;
+    padding: 0.25rem;
+    color: $brand-primary2;
+  }
+  &__button {
+    @include button;
+  }
+  &__button-image {
+    @include button-img;
+  }
+  &__button-text {
+    @include button-cta;
+  }
+}
