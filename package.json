@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bookshare.shevastraus.com",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.13.8",
     "@googlemaps/markerclusterer": "^1.0.26",
